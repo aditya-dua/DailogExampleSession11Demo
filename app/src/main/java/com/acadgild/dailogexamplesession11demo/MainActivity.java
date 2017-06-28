@@ -1,7 +1,9 @@
 package com.acadgild.dailogexamplesession11demo;
 
 import android.app.AlertDialog;
+
 import android.content.DialogInterface;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
      * Are you sure you want to exit ? Yes/No/Cancel
      * @param savedInstanceState
      */
+    FragmentManager fm=getSupportFragmentManager();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +31,17 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 openAlertDailogBox();
+            }
+        });
+
+        Button alertfrgbutton=(Button) findViewById(R.id.alertfragbutton);
+        alertfrgbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDFragment alertDFragment = new AlertDFragment();
+
+                alertDFragment.show(fm,"Alert Fragment");
+               // alertDFragment.show(fm,"Alert Dialog Fragment");
             }
         });
     }

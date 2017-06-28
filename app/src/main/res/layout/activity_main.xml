@@ -27,4 +27,16 @@
         android:layout_below="@+id/textView"
         android:layout_toRightOf="@+id/textView"
         android:layout_toEndOf="@+id/textView" />
+
+    <Button
+        android:text="Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dbutton"
+        android:layout_alignLeft="@+id/dbutton"
+        android:layout_alignStart="@+id/dbutton"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="94dp"
+        android:id="@+id/alertfragbutton" />
 </RelativeLayout>
